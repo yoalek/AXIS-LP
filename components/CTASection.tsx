@@ -1,0 +1,129 @@
+
+import React, { useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { Counter } from './ui/counter';
+import { Button } from './ui/button';
+import { MoveRight } from 'lucide-react';
+
+const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
+  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 cursor-pointer transition-all border border-white/5">
+    {icon}
+  </div>
+);
+
+const StatItem = ({ rawValue, suffix, label, trigger }: { rawValue: number; suffix: string; label: string; trigger: boolean }) => (
+  <div className="flex flex-col">
+    <div className="flex items-center gap-0.5 h-12">
+      <Counter 
+        end={rawValue}
+        trigger={trigger}
+        duration={2.5}
+        fontSize={36}
+        className="text-white tracking-tighter px-0 inline-flex items-center leading-none"
+      />
+      {suffix && (
+        <span className="text-3xl md:text-4xl font-extrabold text-white tracking-tighter leading-none flex items-center">
+          {suffix}
+        </span>
+      )}
+    </div>
+    <span className="text-[13px] text-white/60 font-medium uppercase tracking-wider mt-3">{label}</span>
+  </div>
+);
+
+const CTASection: React.FC = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert("Dados recebidos! Em menos de 2h um consultor sênior da Axis ligará para você agendar o diagnóstico.");
+  };
+
+  return (
+    <section id="contato" className="py-24 bg-background transition-colors">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
+          ref={containerRef}
+          initial={{ opacity: 0, scale: 0.95, y: 40 }}
+          animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="relative bg-foreground rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-stretch min-h-[700px] border border-border"
+        >
+          <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+          <div className="flex-1 p-10 md:p-20 flex flex-col justify-between relative z-10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-white text-[13px] font-bold mb-8 uppercase tracking-widest">
+                Fale Conosco
+              </div>
+              <h2 className="text-5xl md:text-[72px] font-bold text-background leading-[1] tracking-tight mb-12">
+                Pare de Correr <br />
+                <span className="italic font-normal text-background/70">Riscos Hoje Mesmo.</span>
+              </h2>
+              <p className="text-background/80 text-lg md:text-xl max-w-md mb-8">Agende um diagnóstico gratuito e descubra em 15 minutos onde sua empresa está perdendo dinheiro para o fisco.</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.6, duration: 1 }}
+              className="grid grid-cols-2 gap-y-10 gap-x-4"
+            >
+              <StatItem rawValue={150} suffix="+" label="Empresas Blindadas" trigger={isInView} />
+              <StatItem rawValue={10} suffix=" Anos" label="De Atuação no Norte" trigger={isInView} />
+              <StatItem rawValue={0} suffix=" Multas" label="Em Clientes Ativos" trigger={isInView} />
+              <StatItem rawValue={45} suffix="%" label="Economia Operacional" trigger={isInView} />
+            </motion.div>
+          </div>
+
+          <div className="lg:w-[48%] flex items-center justify-center p-6 md:p-12">
+            <motion.div 
+              initial={{ opacity: 0, x: 40 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+              className="bg-card rounded-[2rem] w-full max-w-md p-8 md:p-12 shadow-2xl transform lg:translate-x-4 border border-border"
+            >
+              <div className="mb-10 text-center lg:text-left">
+                <h3 className="text-3xl font-bold text-card-foreground leading-tight mb-2">Falar com Consultor</h3>
+                <p className="text-muted-foreground font-medium italic">Vagas limitadas para diagnóstico gratuito este mês.</p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="relative group">
+                  <input type="text" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="Nome do Decisor" required />
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+                </div>
+                <div className="relative group">
+                  <input type="tel" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="WhatsApp (DDD)" required />
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+                </div>
+                <div className="relative group">
+                  <input type="email" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="E-mail Corporativo" required />
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+                </div>
+
+                <Button 
+                  type="submit" 
+                  variant="shine" 
+                  size="lg" 
+                  className="w-full py-7 rounded-full font-black uppercase tracking-widest"
+                  Icon={MoveRight}
+                  iconPlacement="right"
+                >
+                  AGENDAR MINHA REUNIÃO
+                </Button>
+              </form>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default CTASection;

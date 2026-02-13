@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RH-DP Outsourcing | Gestão Estratégica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --card: #ffffff;
+          --ring: #0477d1;
+          --input: #e3e3e3;
+          --muted: #eeeeee;
+          --accent: #e3e3e3;
+          --border: #e3e3e3;
+          --radius: 0.5rem;
+          --shadow: 0 0 3px 2px rgba(100, 100, 100, 0.6);
+          --popover: #ffffff;
+          --primary: #0477d1;
+          --spacing: 4px;
+          --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          --secondary: #edf6fc;
+          --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          --shadow-md: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+          --shadow-sm: 3px 3px 5px 0 rgba(100, 100, 100, 0.6);
+          --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          --background: #ffffff;
+          --foreground: #222222;
+          --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          --destructive: #d9363d;
+          --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+          --card-foreground: #222222;
+          --muted-foreground: #787878;
+          --accent-foreground: #035392;
+          --popover-foreground: #222222;
+          --primary-foreground: #ffffff;
+          --secondary-foreground: #575757;
+          --destructive-foreground: #ffffff;
+        }
+
+        .dark {
+          --card: #1a1a1a;
+          --ring: #0c82d6;
+          --input: #4a4a4a;
+          --muted: #3a3a3a;
+          --accent: #4a4a4a;
+          --border: #4a4a4a;
+          --popover: #1a1a1a;
+          --primary: #0c82d6;
+          --secondary: #2a2a2a;
+          --background: #000000;
+          --foreground: #ffffff;
+          --destructive: #c0392b;
+          --card-foreground: #ffffff;
+          --muted-foreground: #8a8a8a;
+          --accent-foreground: #e3e3e3;
+          --popover-foreground: #ffffff;
+          --primary-foreground: #ffffff;
+          --secondary-foreground: #a3a3a3;
+          --destructive-foreground: #ffffff;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--foreground);
+            scroll-behavior: smooth;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-serif {
+            font-family: 'DM Serif Display', serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              colors: {
+                background: 'var(--background)',
+                foreground: 'var(--foreground)',
+                card: 'var(--card)',
+                'card-foreground': 'var(--card-foreground)',
+                popover: 'var(--popover)',
+                'popover-foreground': 'var(--popover-foreground)',
+                primary: 'var(--primary)',
+                'primary-foreground': 'var(--primary-foreground)',
+                secondary: 'var(--secondary)',
+                'secondary-foreground': 'var(--secondary-foreground)',
+                muted: 'var(--muted)',
+                'muted-foreground': 'var(--muted-foreground)',
+                accent: 'var(--accent)',
+                'accent-foreground': 'var(--accent-foreground)',
+                destructive: 'var(--destructive)',
+                'destructive-foreground': 'var(--destructive-foreground)',
+                border: 'var(--border)',
+                input: 'var(--input)',
+                ring: 'var(--ring)',
+              },
+              borderRadius: {
+                lg: 'var(--radius)',
+                md: 'calc(var(--radius) - 2px)',
+                sm: 'calc(var(--radius) - 4px)',
+              },
+              boxShadow: {
+                sm: 'var(--shadow-sm)',
+                md: 'var(--shadow-md)',
+                lg: 'var(--shadow-lg)',
+                xl: 'var(--shadow-xl)',
+                '2xl': 'var(--shadow-2xl)',
+                inner: 'var(--shadow-inner)',
+              },
+              animation: {
+                shine: "shine 3s linear infinite",
+              },
+              keyframes: {
+                shine: {
+                  "0%": { "background-position": "0% 50%" },
+                  "50%": { "background-position": "100% 50%" },
+                  "100%": { "background-position": "0% 50%" },
+                },
+              },
+            }
+          }
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.2.4",
+    "react/": "https://esm.sh/react@19.2.4/",
+    "react-dom": "https://esm.sh/react-dom@19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@19.2.4/",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.10?deps=react@19.2.4,react-dom@19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@0.454.0?deps=react@19.2.4",
+    "@radix-ui/react-slot": "https://esm.sh/@radix-ui/react-slot@1.1.0?deps=react@19.2.4",
+    "@radix-ui/react-icons": "https://esm.sh/@radix-ui/react-icons@1.3.0?deps=react@19.2.4",
+    "@radix-ui/react-navigation-menu": "https://esm.sh/@radix-ui/react-navigation-menu@1.2.0?deps=react@19.2.4,react-dom@19.2.4",
+    "class-variance-authority": "https://esm.sh/class-variance-authority@0.7.0"
+  }
+}
+</script>
+</head>
+<body class="bg-background text-foreground overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
