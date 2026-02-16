@@ -145,7 +145,7 @@ const ComparisonTable: React.FC = () => {
             <FlowButton
               text="Garantir Minha Blindagem Sênior"
               className="font-bold"
-              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.open('https://wa.me/5591992026660', '_blank')}
             />
           </InView>
         </div>

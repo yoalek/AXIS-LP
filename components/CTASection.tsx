@@ -36,9 +36,21 @@ const CTASection: React.FC = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Dados recebidos! Em menos de 2h um consultor sênior da Axis ligará para você agendar o diagnóstico.");
+
+    // Captura dos dados do formulário
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const phone = formData.get('phone') as string;
+    const email = formData.get('email') as string;
+
+    // Construção da mensagem
+    const message = `Olá, gostaria de agendar um diagnóstico gratuito.\n\n*Nome:* ${name}\n*WhatsApp:* ${phone}\n*E-mail:* ${email}`;
+
+    // Codificação para URL e redirecionamento
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/5591992026660?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -96,15 +108,15 @@ const CTASection: React.FC = () => {
 
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="relative group">
-                  <input type="text" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="Nome do Decisor" required />
+                  <input type="text" name="name" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="Nome do Decisor" required />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
                 </div>
                 <div className="relative group">
-                  <input type="tel" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="WhatsApp (DDD)" required />
+                  <input type="tel" name="phone" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="WhatsApp (DDD)" required />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
                 </div>
                 <div className="relative group">
-                  <input type="email" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="E-mail Corporativo" required />
+                  <input type="email" name="email" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="E-mail Corporativo" required />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
                 </div>
 

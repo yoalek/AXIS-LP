@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               <li><a href="#solucao" className="hover:text-primary transition-colors">Método Axis</a></li>
               <li><a href="#comparativo" className="hover:text-primary transition-colors">Custo vs Benefício</a></li>
               <li><a href="#servicos" className="hover:text-primary transition-colors">Nossos Serviços</a></li>
-              <li><FlowButton text="Agendar Diagnóstico" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })} size="sm" className="w-full sm:w-auto" /></li>
+              <li><FlowButton text="Agendar Diagnóstico" onClick={() => window.open('https://wa.me/5591992026660', '_blank')} size="sm" className="w-full sm:w-auto" /></li>
             </ul>
           </div>
           <div>

@@ -13,7 +13,7 @@ const UrgencyBadge: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.8 }}
       className="inline-flex items-center gap-3 bg-transparent border border-slate-200/50 dark:border-neutral-800/50 p-1 pr-4 rounded-full mb-10 transition-all cursor-pointer group hover:border-primary/20"
-      onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+      onClick={() => window.open('https://wa.me/5591992026660', '_blank')}
     >
       {/* Parte da esquerda: Indicador de status com brilho difuso e efeito de respiração */}
       <div className="flex items-center gap-2 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
@@ -145,7 +145,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-row gap-4 mt-2">
                 <FlowButton
                   text="Agendar Diagnóstico"
-                  onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => window.open('https://wa.me/5591992026660', '_blank')}
                   className="w-full sm:w-auto justify-center"
                 />
 

@@ -16,7 +16,7 @@ const Authority: React.FC = () => {
   return (
     <section className="py-32 bg-background overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           ref={containerRef}
           initial={{ opacity: 0, y: 50, filter: 'blur(8px)' }}
           animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
@@ -25,12 +25,11 @@ const Authority: React.FC = () => {
         >
           <div className="w-full lg:w-[48%] relative">
             <div className="aspect-[4/5] md:aspect-[16/10] lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-border bg-muted group/img relative">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=85&w=1000" 
-                alt="Joseane Medeiros - Founder Axis" 
+              <img
+                src="/joseane.jpg"
+                alt="Joseane Medeiros - Founder Axis"
                 loading="eager"
                 fetchPriority="high"
-                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
@@ -43,7 +42,7 @@ const Authority: React.FC = () => {
               <p className="text-2xl md:text-[34px] font-medium text-foreground leading-[1.3] tracking-tight mb-8">
                 Transformando a complexidade trabalhista do Pará em <span className="text-primary italic">estratégia de lucro.</span>
               </p>
-              
+
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-normal">
                 Com mais de 10 anos de experiência em Belém, guio empresas de alta rotatividade através das armadilhas do eSocial e DCTF-Web. Meu foco é dar ao dono do negócio a liberdade para crescer, enquanto a Axis garante que nenhum centavo seja perdido em multas ou processos evitáveis.
               </p>
