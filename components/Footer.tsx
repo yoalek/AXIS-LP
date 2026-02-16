@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { FlowButton } from './ui/flow-button';
 
 const Footer: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Footer: React.FC = () => {
               <li><a href="#solucao" className="hover:text-primary transition-colors">Método Axis</a></li>
               <li><a href="#comparativo" className="hover:text-primary transition-colors">Custo vs Benefício</a></li>
               <li><a href="#servicos" className="hover:text-primary transition-colors">Nossos Serviços</a></li>
-              <li><a href="#contato" className="hover:text-primary transition-colors">Agendar Diagnóstico</a></li>
+              <li><FlowButton text="Agendar Diagnóstico" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })} size="sm" className="w-full sm:w-auto" /></li>
             </ul>
           </div>
           <div>
@@ -31,7 +32,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="pt-8 border-t border-border text-center">
-          <p className="text-muted-foreground text-sm">© 2024 AXIS Gestão Humana. Todos os direitos reservados. Foco total em Compliance e Risco Zero.</p>
+          <p className="text-muted-foreground text-sm">© 2026 AXIS Gestão Humana. Todos os direitos reservados. Foco total em Compliance e Risco Zero.</p>
         </div>
       </div>
     </footer>

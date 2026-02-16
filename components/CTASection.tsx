@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Counter } from './ui/counter';
 import { Button } from './ui/button';
+import { FlowButton } from './ui/flow-button';
 import { MoveRight } from 'lucide-react';
 
 const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
@@ -14,7 +15,7 @@ const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
 const StatItem = ({ rawValue, suffix, label, trigger }: { rawValue: number; suffix: string; label: string; trigger: boolean }) => (
   <div className="flex flex-col">
     <div className="flex items-center gap-0.5 h-12">
-      <Counter 
+      <Counter
         end={rawValue}
         trigger={trigger}
         duration={2.5}
@@ -43,7 +44,7 @@ const CTASection: React.FC = () => {
   return (
     <section id="contato" className="py-24 bg-background transition-colors">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           ref={containerRef}
           initial={{ opacity: 0, scale: 0.95, y: 40 }}
           animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
@@ -68,7 +69,7 @@ const CTASection: React.FC = () => {
               <p className="text-background/80 text-lg md:text-xl max-w-md mb-8">Agende um diagnóstico gratuito e descubra em 15 minutos onde sua empresa está perdendo dinheiro para o fisco.</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.6, duration: 1 }}
@@ -82,7 +83,7 @@ const CTASection: React.FC = () => {
           </div>
 
           <div className="lg:w-[48%] flex items-center justify-center p-6 md:p-12">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
@@ -107,16 +108,11 @@ const CTASection: React.FC = () => {
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
                 </div>
 
-                <Button 
-                  type="submit" 
-                  variant="shine" 
-                  size="lg" 
-                  className="w-full py-7 rounded-full font-black uppercase tracking-widest"
-                  Icon={MoveRight}
-                  iconPlacement="right"
-                >
-                  AGENDAR MINHA REUNIÃO
-                </Button>
+                <FlowButton
+                  type="submit"
+                  text="AGENDAR MINHA REUNIÃO"
+                  className="w-full justify-center font-black uppercase tracking-widest"
+                />
               </form>
             </motion.div>
           </div>

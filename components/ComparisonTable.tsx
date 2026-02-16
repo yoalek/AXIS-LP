@@ -2,6 +2,7 @@
 import React, { useRef, ReactNode } from 'react';
 import { motion, useInView, Variant, Transition, UseInViewOptions } from 'framer-motion';
 import { Button } from './ui/button';
+import { FlowButton } from './ui/flow-button';
 import { MoveRight } from 'lucide-react';
 
 interface InViewProps {
@@ -46,30 +47,30 @@ const CrossIcon = () => (
 
 const ComparisonTable: React.FC = () => {
   const comparisonItems = [
-    { 
-      label: "Qualificação Técnica", 
-      solve: "Time de Consultores Sênior", 
-      traditional: "Generalistas com alta rotatividade" 
+    {
+      label: "Qualificação Técnica",
+      solve: "Time de Consultores Sênior",
+      traditional: "Generalistas com alta rotatividade"
     },
-    { 
-      label: "Segurança de Processos", 
-      solve: "Blindagem Total eSocial/FGTS", 
-      traditional: "Risco constante de multas e erros" 
+    {
+      label: "Segurança de Processos",
+      solve: "Blindagem Total eSocial/FGTS",
+      traditional: "Risco constante de multas e erros"
     },
-    { 
-      label: "Continuidade Operacional", 
-      solve: "Operação Ininterrupta e Segura", 
-      traditional: "Vulnerabilidade a férias e faltas" 
+    {
+      label: "Continuidade Operacional",
+      solve: "Operação Ininterrupta e Segura",
+      traditional: "Vulnerabilidade a férias e faltas"
     },
-    { 
-      label: "Agilidade Operacional", 
-      solve: "Processamento em Tempo Recorde", 
-      traditional: "Prazos lentos e burocracia interna" 
+    {
+      label: "Agilidade Operacional",
+      solve: "Processamento em Tempo Recorde",
+      traditional: "Prazos lentos e burocracia interna"
     },
-    { 
-      label: "Custo-Benefício", 
-      solve: "Redução de até 40% nos Custos Fixos", 
-      traditional: "Alto custo fixo e encargos CLT" 
+    {
+      label: "Custo-Benefício",
+      solve: "Redução de até 40% nos Custos Fixos",
+      traditional: "Alto custo fixo e encargos CLT"
     }
   ];
 
@@ -141,16 +142,11 @@ const ComparisonTable: React.FC = () => {
 
         <div className="mt-20 text-center">
           <InView transition={{ delay: 0.7, duration: 0.6 }}>
-            <Button 
-              variant="ringHover" 
-              size="lg" 
-              className="rounded-full font-bold"
-              onClick={() => document.getElementById('contato')?.scrollIntoView({behavior: 'smooth'})}
-              Icon={MoveRight}
-              iconPlacement="right"
-            >
-              Garantir Minha Blindagem Sênior
-            </Button>
+            <FlowButton
+              text="Garantir Minha Blindagem Sênior"
+              className="font-bold"
+              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+            />
           </InView>
         </div>
       </div>

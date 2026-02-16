@@ -3,6 +3,7 @@
 
 import * as React from "react";
 import { Button } from "./button";
+import { FlowButton } from "./flow-button";
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -56,12 +57,12 @@ function Header() {
     return (
         <header className="w-full z-[5000] fixed top-0 left-0 bg-background/80 backdrop-blur-md border-b border-border transition-all">
             <div className="max-w-7xl mx-auto px-6 h-20 flex flex-row items-center justify-between">
-                
+
                 {/* Logo & Desktop Nav */}
                 <div className="flex items-center gap-10">
-                    <div 
-                        className="flex items-center gap-3 cursor-pointer group" 
-                        onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                    <div
+                        className="flex items-center gap-3 cursor-pointer group"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                         <div className="relative w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
                             {/* Rhombus Icon matching the identity style */}
@@ -80,10 +81,10 @@ function Header() {
                             <NavigationMenuList className="gap-1">
                                 {navigationItems.map((item) => (
                                     <NavigationMenuItem key={item.title}>
-                                        <NavigationMenuLink 
-                                            href={item.href} 
+                                        <NavigationMenuLink
+                                            href={item.href}
                                             className={cn(
-                                                navigationMenuTriggerStyle(), 
+                                                navigationMenuTriggerStyle(),
                                                 "bg-transparent hover:bg-accent/50 transition-colors font-bold text-muted-foreground hover:text-primary"
                                             )}
                                         >
@@ -99,27 +100,24 @@ function Header() {
                 {/* Right Actions */}
                 <div className="flex items-center gap-6">
                     {/* Theme Toggle standardized with the Button component shadow pattern */}
-                    <Button 
+                    <Button
                         variant="outline"
                         size="icon"
                         onClick={toggleTheme}
-                        className="rounded-full shadow-lg hover:shadow-xl transition-all border-border/50 bg-background/50 backdrop-blur-sm"
+                        className="rounded-full shadow-md shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 transition-all border-border/50 bg-background/50 backdrop-blur-sm"
                         aria-label="Toggle Theme"
                     >
                         {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                     </Button>
-                    
+
                     <div className="flex items-center">
                         {/* Unique Primary Action Button */}
-                        <Button 
-                            variant="shine" 
-                            className="rounded-full px-8 font-black uppercase tracking-wider text-xs shadow-xl shadow-primary/30"
-                            onClick={() => document.getElementById('contato')?.scrollIntoView({behavior: 'smooth'})}
-                            Icon={ArrowRight}
-                            iconPlacement="right"
-                        >
-                            Agendar Diagnóstico
-                        </Button>
+                        <FlowButton
+                            text="Agendar Diagnóstico"
+                            size="sm"
+                            className="font-black uppercase tracking-wider shadow-lg shadow-[#0369A1]/20 hover:shadow-xl hover:shadow-[#0369A1]/30"
+                            onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+                        />
                     </div>
                 </div>
             </div>

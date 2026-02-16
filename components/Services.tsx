@@ -1,6 +1,6 @@
 
 import React, { useState, useRef } from 'react';
-import { motion, useInView, Variants, AnimatePresence } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 
 const ArrowIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -29,8 +29,8 @@ const WordPullUp: React.FC<WordPullUpProps> = ({ words, className, delay = 0 }) 
   );
 };
 
-interface ServiceCardProps { id: string; title: string; desc: string; image: string; isHovered: boolean; onMouseEnter: () => void; onMouseLeave: () => void; }
-const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, image, isHovered, onMouseEnter, onMouseLeave }) => {
+interface ServiceCardProps { id: string; title: string; desc: string; isHovered: boolean; onMouseEnter: () => void; onMouseLeave: () => void; }
+const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, onMouseEnter, onMouseLeave }) => {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: "-100px" });
   return (
@@ -50,16 +50,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, image, isHov
       <motion.div initial={false} animate={{ height: isHovered ? "auto" : 0, opacity: isHovered ? 1 : 0, marginTop: isHovered ? 24 : 0 }} transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }} className="overflow-hidden md:w-2/3 md:ml-16">
         <p className={`text-lg md:text-xl leading-relaxed transition-colors duration-500 font-medium ${isHovered ? 'text-background' : 'text-transparent'}`}>{desc}</p>
       </motion.div>
-      <AnimatePresence>
-        {isHovered && (
-          <motion.div initial={{ opacity: 0, scale: 0.8, x: 20, rotate: 0 }} animate={{ opacity: 1, scale: 1, x: 0, rotate: -6 }} exit={{ opacity: 0, scale: 0.8, x: 20 }} className="hidden lg:block absolute right-32 top-1/2 -translate-y-1/2 z-20 pointer-events-none">
-            <div className="relative w-72 h-48 rounded-2xl overflow-hidden shadow-2xl border-4 border-card">
-              <img src={image} alt={title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-primary/5"></div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
     </motion.div>
   );
 };
@@ -67,10 +58,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, image, isHov
 const Services: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const serviceList = [
-    { id: "01", title: "BPO DE FOLHA COMPLETO", desc: "Gestão pontual de salários, encargos, DCTF-Web e FGTS Digital. Garantimos zero erros e zero multas para sua operação focar no que importa.", image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600" },
-    { id: "02", title: "CICLO DO COLABORADOR", desc: "Admissões em massa, gestão de férias, PIS e processos de rescisão complexos com total segurança jurídica e compliance.", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=600" },
-    { id: "03", title: "BLINDAGEM ESOCIAL", desc: "Monitoramento ativo e auditoria preventiva para evitar passivos ocultos. Sua empresa sempre em dia com a Receita e o Ministério do Trabalho.", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=600" },
-    { id: "04", title: "RECRUTAMENTO & MÃO DE OBRA", desc: "Fornecemos talentos qualificados e mão de obra terceirizada para Facilities, Construção e Varejo com foco em produtividade.", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" },
+    { id: "01", title: "BPO DE FOLHA COMPLETO", desc: "Gestão pontual de salários, encargos, DCTF-Web e FGTS Digital. Garantimos zero erros e zero multas para sua operação focar no que importa." },
+    { id: "02", title: "CICLO DO COLABORADOR", desc: "Admissões em massa, gestão de férias, PIS e processos de rescisão complexos com total segurança jurídica e compliance." },
+    { id: "03", title: "BLINDAGEM ESOCIAL", desc: "Monitoramento ativo e auditoria preventiva para evitar passivos ocultos. Sua empresa sempre em dia com a Receita e o Ministério do Trabalho." },
+    { id: "04", title: "RECRUTAMENTO & MÃO DE OBRA", desc: "Fornecemos talentos qualificados e mão de obra terceirizada para Facilities, Construção e Varejo com foco em produtividade." },
   ];
   return (
     <section id="servicos" className="py-32 bg-background transition-colors">
