@@ -1,0 +1,8 @@
+/vendor/
+/.idea/
+/.vscode/
+/config/config.php
+/deploy.php
+/.deployignore
+/.DS_Store
+.env
