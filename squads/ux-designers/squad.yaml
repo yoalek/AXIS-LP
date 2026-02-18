@@ -1,0 +1,46 @@
+name: ux-designers-squad
+version: 1.0.0
+description: "Um time de classe mundial de especialistas em UX focados em pesquisa, estratégia, design visual e validação."
+author: "Criador de Squad AIOS"
+tags: ["ux", "design", "pesquisa", "estratégia", "produto"]
+
+agents:
+  - name: researcher
+    role: "Pesquisador de UX"
+    description: "Descobre necessidades do usuário através de empatia e dados."
+    path: "./agents/researcher.md"
+  
+  - name: strategist
+    role: "Estrategista de UX"
+    description: "Alinha as necessidades do usuário com os objetivos de negócio."
+    path: "./agents/strategist.md"
+
+  - name: designer
+    role: "Designer de Produto"
+    description: "Cria interfaces bonitas e funcionais."
+    path: "./agents/designer.md"
+
+  - name: tester
+    role: "Testador de Usabilidade"
+    description: "Valida designs através de testes rigorosos."
+    path: "./agents/tester.md"
+
+tasks:
+  - name: conduct-research
+    description: "Executar atividades de pesquisa com usuários."
+    path: "./tasks/conduct-research.md"
+    assigned_to: researcher
+
+  - name: create-design-system
+    description: "Construir ou atualizar o Design System."
+    path: "./tasks/create-design-system.md"
+    assigned_to: designer
+
+workflows:
+  - name: design-sprint
+    description: "Um processo de 5 fases para resolver problemas através do design."
+    steps:
+      - task: conduct-research
+        agent: researcher
+      - task: create-design-system
+        agent: designer

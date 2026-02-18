@@ -115,7 +115,7 @@ function Header() {
                         <FlowButton
                             text="Agendar Diagnóstico"
                             size="sm"
-                            className="font-black uppercase tracking-wider shadow-lg shadow-[#0369A1]/20 hover:shadow-xl hover:shadow-[#0369A1]/30"
+                            className="font-black uppercase tracking-wider shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30"
                             onClick={() => window.open('https://wa.me/5591992026660', '_blank')}
                         />
                     </div>
