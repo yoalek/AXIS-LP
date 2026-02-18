@@ -202,30 +202,30 @@ const PainSection: React.FC = () => {
                 {/* Digital Hourglass */}
                 <div className="flex flex-col items-center gap-2">
                   {/* Top Part (Strategic Time emptying) */}
-                  <div className="w-24 h-16 border-2 border-border border-b-0 rounded-t-3xl bg-secondary/50 relative overflow-hidden">
+                  <div className="w-24 h-16 border-2 border-primary/20 border-b-0 rounded-t-3xl bg-primary/5 relative overflow-hidden backdrop-blur-sm">
                     <motion.div
                       animate={{ height: ['80%', '10%'] }}
                       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                      className="absolute bottom-0 left-0 right-0 bg-primary/20 flex flex-col items-center justify-center"
+                      className="absolute bottom-0 left-0 right-0 bg-primary flex flex-col items-center justify-center opacity-90"
                     >
-                      <span className="text-[8px] font-bold text-primary uppercase">Estratégia</span>
+                      <span className="text-[9px] font-bold text-white uppercase drop-shadow-md">Estratégia</span>
                     </motion.div>
                   </div>
 
                   {/* Neck */}
-                  <div className="w-4 h-2 border-x-2 border-border"></div>
+                  <div className="w-4 h-2 border-x-2 border-primary/20 bg-primary/5"></div>
 
                   {/* Bottom Part (Operational Time filling) */}
-                  <div className="w-24 h-20 border-2 border-border border-t-0 rounded-b-3xl bg-secondary/50 relative overflow-hidden">
+                  <div className="w-24 h-20 border-2 border-destructive/20 border-t-0 rounded-b-3xl bg-destructive/5 relative overflow-hidden backdrop-blur-sm">
                     <motion.div
                       animate={{ height: ['20%', '95%'] }}
                       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                      className="absolute bottom-0 left-0 right-0 bg-destructive/20 flex flex-col items-center pt-2"
+                      className="absolute bottom-0 left-0 right-0 bg-destructive flex flex-col items-center pt-2 opacity-90"
                     >
-                      <span className="text-[8px] font-bold text-destructive uppercase">Operacional</span>
-                      <div className="flex flex-wrap justify-center gap-1 mt-2 px-2">
+                      <span className="text-[9px] font-bold text-white uppercase drop-shadow-md">Operacional</span>
+                      <div className="flex flex-wrap justify-center gap-1 mt-2 px-2 opacity-50">
                         {Array.from({ length: 12 }).map((_, i) => (
-                          <div key={i} className="w-3 h-1 bg-destructive/30 rounded-full"></div>
+                          <div key={i} className="w-3 h-1 bg-white rounded-full"></div>
                         ))}
                       </div>
                     </motion.div>
