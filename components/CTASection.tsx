@@ -75,10 +75,10 @@ const CTASection: React.FC = () => {
                 Fale Conosco
               </div>
               <h2 className="text-5xl md:text-[72px] font-bold text-background leading-[1] tracking-tight mb-12">
-                Pare de Correr <br />
-                <span className="italic font-normal text-background/70">Riscos Hoje Mesmo.</span>
+                Pare de Sangrar <br />
+                <span className="italic font-normal text-background/70">Dinheiro Hoje Mesmo.</span>
               </h2>
-              <p className="text-background/80 text-lg md:text-xl max-w-md mb-8">Agende um diagnóstico gratuito e descubra em 15 minutos onde sua empresa está perdendo dinheiro para o fisco.</p>
+              <p className="text-background/80 text-lg md:text-xl max-w-md mb-8">Agende uma auditoria de risco gratuita e descubra onde sua empresa está exposta a multas do eSocial.</p>
             </motion.div>
 
             <motion.div
@@ -87,10 +87,10 @@ const CTASection: React.FC = () => {
               transition={{ delay: 0.6, duration: 1 }}
               className="grid grid-cols-2 gap-y-10 gap-x-4"
             >
-              <StatItem rawValue={150} suffix="+" label="Empresas Blindadas" trigger={isInView} />
-              <StatItem rawValue={10} suffix=" Anos" label="De Atuação no Norte" trigger={isInView} />
-              <StatItem rawValue={0} suffix=" Multas" label="Em Clientes Ativos" trigger={isInView} />
-              <StatItem rawValue={45} suffix="%" label="Economia Operacional" trigger={isInView} />
+              <StatItem rawValue={100} suffix="%" label="Compliance eSocial" trigger={isInView} />
+              <StatItem rawValue={24} suffix="/7" label="Monitoramento de Risco" trigger={isInView} />
+              <StatItem rawValue={0} suffix=" Risco" label="De Multa Silenciosa" trigger={isInView} />
+              <StatItem rawValue={40} suffix="%" label="Redução de Custos (Média)" trigger={isInView} />
             </motion.div>
           </div>
 
@@ -122,7 +122,7 @@ const CTASection: React.FC = () => {
 
                 <FlowButton
                   type="submit"
-                  text="AGENDAR MINHA REUNIÃO"
+                  text="QUERO MINHA AUDITORIA GRATUITA"
                   className="w-full justify-center font-black uppercase tracking-widest"
                 />
               </form>

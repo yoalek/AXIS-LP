@@ -59,7 +59,7 @@ const UrgencyBadge: React.FC = () => {
         <span className="text-[12px] font-medium text-slate-400 dark:text-neutral-500">Disponíveis este mês</span>
         <div className="w-[1px] h-3.5 bg-slate-200/60 dark:bg-neutral-800/60"></div>
         <div className="flex items-center gap-1.5">
-          <span className="text-[12px] font-bold text-slate-500 dark:text-neutral-400 group-hover:text-primary transition-colors">Agendar Reunião</span>
+          <span className="text-[12px] font-bold text-slate-500 dark:text-neutral-400 group-hover:text-primary transition-colors">Solicitar Auditoria</span>
           <div className="w-5 h-5 rounded-full bg-slate-50 dark:bg-neutral-900 border border-slate-200/50 dark:border-neutral-800/50 flex items-center justify-center group-hover:border-primary/30 transition-all">
             <svg className="w-2.5 h-2.5 text-slate-400 group-hover:text-primary transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5">
               <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -128,23 +128,23 @@ const Hero: React.FC = () => {
               <div className="flex justify-start">
                 <UrgencyBadge />
               </div>
-              <h1 className="text-5xl lg:text-[72px] font-extrabold text-foreground leading-[1.05] tracking-tighter mb-6 text-left">
-                Blindagem de Folha,
+              <h1 className="text-5xl lg:text-[64px] font-extrabold text-foreground leading-[1.05] tracking-tighter mb-6 text-left">
+                Sua Empresa Está
                 <br />
-                <span className="text-primary italic font-normal">Risco Zero e eSocial 100%.</span>
+                <span className="text-primary italic font-normal">Sangrando Dinheiro no eSocial?</span>
               </h1>
             </BlurFade>
 
             <BlurFade delay={0.2}>
               <p className="text-lg lg:text-xl text-muted-foreground font-medium max-w-xl leading-relaxed text-left">
-                Terceirize o DP da sua empresa com quem domina DCTF-Web, FGTS Digital e admissões em massa. Reduza custos operacionais e elimine passivos trabalhistas ocultos hoje mesmo.
+                Descubra as inconsistências ocultas na DCTF-Web que estão gerando multas silenciosas. Pare de rasgar dinheiro com passivo trabalhista e foque no seu negócio.
               </p>
             </BlurFade>
 
             <BlurFade delay={0.4}>
               <div className="flex flex-row gap-4 mt-2">
                 <FlowButton
-                  text="Agendar Diagnóstico"
+                  text="Auditoria de Risco eSocial (Gratuita)"
                   onClick={() => window.open('https://wa.me/5591992026660', '_blank')}
                   className="w-full sm:w-auto justify-center"
                 />

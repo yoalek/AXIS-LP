@@ -32,6 +32,7 @@ export interface FlowButtonProps
     text?: string;
     className?: string; // Explicitly add className to resolve potential type conflicts
     onClick?: () => void; // Explicitly add onClick just in case
+    type?: "submit" | "reset" | "button";
 }
 
 export function FlowButton({ text = "Modern Button", className, size, variant, ...props }: FlowButtonProps) {

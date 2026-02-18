@@ -1,0 +1,48 @@
+name: copywriters-squad
+version: 1.0.0
+description: "A specialized squad for end-to-end content production, including strategy, writing, and editing."
+author: "AIOS Squad Creator"
+tags: ["content", "marketing", "copywriting"]
+
+agents:
+  - name: strategist
+    role: "Content Strategist"
+    description: "Defines content strategy, target audience, and creates briefs."
+    path: "./agents/strategist.md"
+  
+  - name: writer
+    role: "Senior Copywriter"
+    description: "Drafts creative content based on briefs."
+    path: "./agents/writer.md"
+
+  - name: editor
+    role: "Editor & QA"
+    description: "Reviews, refines, and optimizes content."
+    path: "./agents/editor.md"
+
+tasks:
+  - name: create-campaign
+    description: "Plan a new content campaign"
+    path: "./tasks/create-campaign.md"
+    assigned_to: strategist
+
+  - name: write-article
+    description: "Write a standard article or blog post"
+    path: "./tasks/write-article.md"
+    assigned_to: writer
+
+  - name: review-content
+    description: "Review and polish content"
+    path: "./tasks/review.md"
+    assigned_to: editor
+
+workflows:
+  - name: full-article-production
+    description: "From strategy to polished article"
+    steps:
+      - task: create-campaign
+        agent: strategist
+      - task: write-article
+        agent: writer
+      - task: review-content
+        agent: editor
