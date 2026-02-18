@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
                 <UrgencyBadge />
               </div>
               <h1 className="text-5xl lg:text-[64px] font-extrabold text-foreground leading-[1.05] tracking-tighter mb-6 text-left">
-                Sua Empresa Está
+                Sua Construtora Está
                 <br />
                 <span className="text-primary italic font-normal">Sangrando Dinheiro no eSocial?</span>
               </h1>
@@ -137,7 +137,7 @@ const Hero: React.FC = () => {
 
             <BlurFade delay={0.2}>
               <p className="text-lg lg:text-xl text-muted-foreground font-medium max-w-xl leading-relaxed text-left">
-                Descubra as inconsistências ocultas na DCTF-Web que estão gerando multas silenciosas. Pare de rasgar dinheiro com passivo trabalhista e foque no seu negócio.
+                Descubra as inconsistências ocultas na DCTF-Web que estão gerando multas silenciosas. Pare de rasgar dinheiro com passivo trabalhista e foque na sua obra.
               </p>
             </BlurFade>
 
