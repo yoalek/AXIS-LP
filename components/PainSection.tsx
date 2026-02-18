@@ -59,7 +59,7 @@ const MagicHeading: React.FC<{ text: string }> = ({ text }) => {
 
 const PainCard: React.FC<{ title: string; desc: string; children: React.ReactNode }> = ({ title, desc, children }) => (
   <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 py-16 border-t border-border group transition-all duration-500">
-    <div className="w-full md:w-[480px] h-[320px] bg-secondary/20 rounded-[2.5rem] flex items-center justify-center p-8 overflow-hidden relative border border-border group-hover:bg-secondary/40 transition-all duration-500 shadow-inner">
+    <div className="w-full md:w-[480px] h-[320px] bg-card/60 dark:bg-slate-950/60 backdrop-blur-md rounded-[2.5rem] flex items-center justify-center p-8 overflow-hidden relative border border-border/50 dark:border-white/10 group-hover:border-primary/30 transition-all duration-500 shadow-xl dark:shadow-2xl">
       {children}
     </div>
     <div className="flex-1 text-center md:text-left">
