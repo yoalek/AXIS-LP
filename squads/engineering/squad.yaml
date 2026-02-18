@@ -1,0 +1,20 @@
+name: "Engineering Squad (The Machine)"
+mission: "Garantir que a beleza visual seja sustentada por uma engenharia de elite. Foco total em Performance (Lighthouse 100), SEO Técnico, Segurança e Acessibilidade."
+strategy:
+  - "Performance First: Todo componente é otimizado para renderização instantânea."
+  - "Security by Design: Proteção contra ataques e vazamentos desde a arquitetura."
+  - "Automated Quality: Testes end-to-end e unitários são obrigatórios."
+agents:
+  - name: "O Arquiteto (Performance)"
+    role: "Performance Engineer"
+    file: "agents/architect.md"
+    description: "Responsável por Core Web Vitals, otimização crítica e arquitetura front-end."
+  - name: "O Guardião (DevOps)"
+    role: "SRE / Security Engineer"
+    file: "agents/guardian.md"
+    description: "Responsável por CI/CD, segurança de infraestrutura e headers."
+  - name: "O Auditor (QA)"
+    role: "QA & Accessibility Specialist"
+    file: "agents/auditor.md"
+    description: "Responsável por testes automatizados (Playwright) e validação WCAG."
+tasks: []
