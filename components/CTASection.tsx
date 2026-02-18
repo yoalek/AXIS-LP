@@ -44,9 +44,10 @@ const CTASection: React.FC = () => {
     const name = formData.get('name') as string;
     const phone = formData.get('phone') as string;
     const email = formData.get('email') as string;
+    const employees = formData.get('employees') as string;
 
     // Construção da mensagem
-    const message = `Olá, gostaria de agendar um diagnóstico gratuito.\n\n*Nome:* ${name}\n*WhatsApp:* ${phone}\n*E-mail:* ${email}`;
+    const message = `Olá, gostaria de agendar uma auditoria gratuita.\n\n*Nome:* ${name}\n*Empresa (Porte):* ${employees}\n*WhatsApp:* ${phone}\n*E-mail:* ${email}`;
 
     // Codificação para URL e redirecionamento
     const encodedMessage = encodeURIComponent(message);
@@ -110,6 +111,20 @@ const CTASection: React.FC = () => {
                 <div className="relative group">
                   <input type="text" name="name" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="Nome do Decisor" required />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+                </div>
+
+                <div className="relative group">
+                  <select name="employees" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all appearance-none cursor-pointer" required defaultValue="">
+                    <option value="" disabled className="bg-card text-muted-foreground">Quantos funcionários?</option>
+                    <option value="1-10" className="bg-card text-card-foreground">1 a 10 (Pequeno Porte)</option>
+                    <option value="11-50" className="bg-card text-card-foreground">11 a 50 (Em Crescimento)</option>
+                    <option value="51-200" className="bg-card text-card-foreground">51 a 200 (Médio Porte)</option>
+                    <option value="200+" className="bg-card text-card-foreground">Acima de 200 (Grande Porte)</option>
+                  </select>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground">
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
                 </div>
                 <div className="relative group">
                   <input type="tel" name="phone" className="w-full py-3 bg-transparent border-b border-border focus:border-primary focus:outline-none text-card-foreground font-medium transition-all" placeholder="WhatsApp (DDD)" required />
