@@ -120,14 +120,7 @@ const Hero: React.FC = () => {
                   onClick={() => window.open('https://wa.me/5591992026660', '_blank')}
                   className="w-full sm:w-auto justify-center text-base py-6"
                 />
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="px-8 font-bold transition-all duration-300"
-                  onClick={() => document.getElementById('comparativo')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Comparar Modelos
-                </Button>
+
               </div>
             </BlurFade>
           </div>
