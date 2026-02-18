@@ -10,10 +10,12 @@ import SocialProof from './components/SocialProof';
 import Authority from './components/Authority';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
+import NoiseOverlay from './components/ui/noise-overlay';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/30">
+    <div className="min-h-screen bg-background font-sans antialiased selection:bg-primary/30 text-foreground relative">
+      <NoiseOverlay />
       <Navbar />
       <main className="flex-grow">
         <Hero />

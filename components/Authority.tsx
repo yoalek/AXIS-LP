@@ -18,11 +18,14 @@ const Authority: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           ref={containerRef}
-          initial={{ opacity: 0, y: 50, filter: 'blur(8px)' }}
-          animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
-          transition={{ duration: 0.8, ease: [0.21, 1.02, 0.47, 0.98] }}
-          className="bg-secondary/10 rounded-[2.5rem] p-4 md:p-6 flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20 border border-border shadow-lg"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative backdrop-blur-md bg-white/5 rounded-[2.5rem] p-4 md:p-6 flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20 border border-white/10 shadow-2xl overflow-hidden"
         >
+          {/* Decorative Gradient Blob for Authority */}
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 blur-[80px] rounded-full pointer-events-none" />
           <div className="w-full lg:w-[48%] relative">
             <div className="aspect-[4/5] md:aspect-[16/10] lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-border bg-muted group/img relative">
               <img

@@ -35,14 +35,17 @@ const SocialProof: React.FC = () => {
 
   return (
     <section id="prova-social" className="py-32 bg-slate-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container relative z-10">
         <motion.div
-          ref={containerRef}
-          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
-          animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white rounded-[2.5rem] p-10 md:p-24 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-32 items-start"
+          id="social-proof-card"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="backdrop-blur-md bg-white/5 rounded-[2.5rem] p-10 md:p-24 shadow-2xl border border-white/10 flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-32 items-start relative overflow-hidden"
         >
+          {/* Decorative Gradient Blob for Social Proof */}
+          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none" />
 
           {/* Left Side: Header */}
           <div className="w-full">

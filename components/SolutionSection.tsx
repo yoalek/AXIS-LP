@@ -111,7 +111,7 @@ const SolutionSection: React.FC = () => {
           {/* Right Column - Animated Timeline Content */}
           <div className="lg:col-span-7 relative pt-10">
             {/* The Background Line */}
-            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-[2px] bg-border md:translate-x-[-1px]">
+            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-[2px] bg-white/5 md:translate-x-[-1px]">
               <div
                 className="absolute top-0 w-full bg-gradient-to-b from-primary via-primary to-transparent transition-all duration-300 ease-out"
                 style={{ height: `${progressHeight}%` }}

@@ -87,6 +87,11 @@ const Hero: React.FC = () => {
         className="text-primary/10 opacity-100"
       />
 
+      {/* Ambient Light Orbs */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 blur-[120px] rounded-full opacity-50 pointer-events-none z-0" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/10 blur-[100px] rounded-full opacity-40 pointer-events-none z-0" />
+
+
       <div className="container relative z-10">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           {/* Left Column: Content */}
