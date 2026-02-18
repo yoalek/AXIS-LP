@@ -34,14 +34,14 @@ const SocialProof: React.FC = () => {
   };
 
   return (
-    <section id="prova-social" className="py-32 bg-slate-50/50 overflow-hidden">
+    <section id="prova-social" className="py-32 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           ref={containerRef}
           initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
           animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white rounded-[3rem] p-10 md:p-24 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-32 items-start"
+          className="bg-white rounded-[2.5rem] p-10 md:p-24 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-32 items-start"
         >
 
           {/* Left Side: Header */}

@@ -139,7 +139,7 @@ const SolutionSection: React.FC = () => {
                         {step.title}
                       </h3>
 
-                      <div className="bg-secondary/30 rounded-[2rem] p-8 border border-border group-hover:border-primary/30 group-hover:bg-secondary/50 transition-all duration-500">
+                      <div className="bg-secondary/30 rounded-[2.5rem] p-8 border border-border group-hover:border-primary/30 group-hover:bg-secondary/50 transition-all duration-500">
                         <p className="text-foreground text-lg lg:text-xl leading-relaxed mb-6 font-medium">
                           {step.desc}
                         </p>

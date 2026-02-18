@@ -21,7 +21,7 @@ const Authority: React.FC = () => {
           initial={{ opacity: 0, y: 50, filter: 'blur(8px)' }}
           animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
           transition={{ duration: 0.8, ease: [0.21, 1.02, 0.47, 0.98] }}
-          className="bg-secondary/40 rounded-[3rem] p-4 md:p-6 flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20 border border-border shadow-lg"
+          className="bg-secondary/10 rounded-[2.5rem] p-4 md:p-6 flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20 border border-border shadow-lg"
         >
           <div className="w-full lg:w-[48%] relative">
             <div className="aspect-[4/5] md:aspect-[16/10] lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-border bg-muted group/img relative">

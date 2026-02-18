@@ -1,13 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
-
-const ArrowIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7"></line>
-    <polyline points="7 7 17 7 17 17"></polyline>
-  </svg>
-);
+import { ArrowUpRight } from 'lucide-react';
 
 interface WordPullUpProps { words: string; className?: string; delay?: number; }
 const WordPullUp: React.FC<WordPullUpProps> = ({ words, className, delay = 0 }) => {
@@ -43,7 +37,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, o
         <div className="flex-1 hidden md:block"></div>
         <div className="md:w-32 flex justify-end">
           <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full border flex items-center justify-center transition-all duration-500 ${isHovered ? 'bg-primary border-primary rotate-45 scale-110' : 'bg-transparent border-border group-hover:border-primary'}`}>
-            <ArrowIcon className={`w-5 h-5 md:w-7 md:h-7 transition-colors duration-500 ${isHovered ? 'text-primary-foreground' : 'text-foreground'}`} />
+            <ArrowUpRight className={`w-5 h-5 md:w-7 md:h-7 transition-colors duration-500 ${isHovered ? 'text-primary-foreground' : 'text-foreground'}`} />
           </div>
         </div>
       </div>

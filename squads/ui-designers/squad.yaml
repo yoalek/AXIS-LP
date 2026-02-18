@@ -1,0 +1,46 @@
+name: ui-designers-dream-team
+version: 1.0.0
+description: "Um 'Dream Team' de UI Design focado em criar interfaces premiadas (Awwwards/Dribbble 2026) com excelência visual e interativa."
+author: "Squad AIOS"
+tags: ["ui", "design-visual", "motion", "3d", "awwwards"]
+
+agents:
+  - name: visionary
+    role: "O Visionário (Diretor Criativo)"
+    description: "Define a narrativa visual e o 'Fator Uau'. Focado em Design Emocional."
+    path: "./agents/visionary.md"
+  
+  - name: minimalist
+    role: "O Minimalista (Arquiteto de Interface)"
+    description: "Obsessivo por pixels, tipografia e grids. Cria a estrutura 'invisível'."
+    path: "./agents/minimalist.md"
+
+  - name: alchemist
+    role: "O Alquimista (Designer de Interação)"
+    description: "Mestre em física, movimento e micro-interações. Traz vida à interface."
+    path: "./agents/alchemist.md"
+
+  - name: futurist
+    role: "O Futurista (Designer 3D/Espacial)"
+    description: "Especialista em profundidade, WebGL e experiências imersivas."
+    path: "./agents/futurist.md"
+
+tasks:
+  - name: design-concept
+    description: "Criar o conceito visual inicial e a direção de arte."
+    path: "./tasks/design-concept.md"
+    assigned_to: visionary
+
+  - name: refine-ui
+    description: "Polir a interface até a perfeição absoluta."
+    path: "./tasks/refine-ui.md"
+    assigned_to: minimalist
+
+workflows:
+  - name: create-awwwards-site
+    description: "Fluxo completo para criar um site digno de prêmios."
+    steps:
+      - task: design-concept
+        agent: visionary
+      - task: refine-ui
+        agent: minimalist

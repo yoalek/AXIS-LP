@@ -55,14 +55,14 @@ const CTASection: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="py-24 bg-background transition-colors">
+    <section id="contato" className="py-32 bg-background transition-colors">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           ref={containerRef}
           initial={{ opacity: 0, scale: 0.95, y: 40 }}
           animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative bg-foreground rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-stretch min-h-[700px] border border-border"
+          className="relative bg-foreground rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row items-stretch min-h-[700px] border border-border"
         >
           <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
 

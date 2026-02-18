@@ -3,7 +3,7 @@ import React, { useRef, ReactNode } from 'react';
 import { motion, useInView, Variant, Transition, UseInViewOptions } from 'framer-motion';
 import { Button } from './ui/button';
 import { FlowButton } from './ui/flow-button';
-import { MoveRight } from 'lucide-react';
+import { MoveRight, Check, X } from 'lucide-react';
 
 interface InViewProps {
   children: ReactNode;
@@ -32,18 +32,6 @@ export function InView({
     </motion.div>
   );
 }
-
-const CheckIcon = () => (
-  <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-  </svg>
-);
-
-const CrossIcon = () => (
-  <svg className="w-5 h-5 text-destructive flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12" />
-  </svg>
-);
 
 const ComparisonTable: React.FC = () => {
   const comparisonItems = [
@@ -75,7 +63,7 @@ const ComparisonTable: React.FC = () => {
   ];
 
   return (
-    <section id="comparativo" className="py-32 bg-secondary/30 transition-colors">
+    <section id="comparativo" className="py-32 bg-secondary/10 transition-colors">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-20">
           <InView transition={{ delay: 0.1, duration: 0.6 }}>
@@ -107,7 +95,7 @@ const ComparisonTable: React.FC = () => {
                 {comparisonItems.map((item, idx) => (
                   <div key={idx} className="flex flex-col gap-1 pb-4 border-b border-border last:border-0">
                     <div className="flex items-center gap-3">
-                      <CheckIcon />
+                      <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                       <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{item.label}</span>
                     </div>
                     <p className="pl-8 text-[17px] font-bold text-primary">
@@ -127,7 +115,7 @@ const ComparisonTable: React.FC = () => {
                 {comparisonItems.map((item, idx) => (
                   <div key={idx} className="flex flex-col gap-1 pb-4 border-b border-border/50 last:border-0">
                     <div className="flex items-center gap-3">
-                      <CrossIcon />
+                      <X className="w-5 h-5 text-destructive flex-shrink-0" />
                       <span className="text-sm font-bold text-muted-foreground/60 uppercase tracking-wider">{item.label}</span>
                     </div>
                     <p className="pl-8 text-[17px] font-medium text-muted-foreground">
