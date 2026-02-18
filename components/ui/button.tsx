@@ -4,39 +4,39 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-95",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-95",
   {
     variants: {
       variant: {
-        default: "bg-[#0369A1] text-white hover:bg-[#0369A1]/90 shadow-lg shadow-[#0369A1]/20 hover:shadow-xl hover:shadow-[#0369A1]/30 hover:-translate-y-0.5 transition-all duration-300",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-lg shadow-destructive/20 hover:shadow-xl hover:shadow-destructive/30 hover:-translate-y-0.5 transition-all duration-300",
         outline:
-          "border border-input bg-background hover:bg-[#0369A1] hover:text-white hover:border-[#0369A1] transition-colors duration-300",
+          "border-2 border-primary/20 bg-background text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-300",
         secondary:
-          "bg-transparent border-2 border-[#0F172A] text-[#0F172A] hover:bg-[#0369A1]/10 hover:text-[#0369A1] hover:-translate-y-0.5 dark:border-white dark:text-white dark:hover:bg-white/10",
-        ghost: "hover:bg-[#0369A1]/10 hover:text-[#0369A1]",
-        link: "text-[#0369A1] underline-offset-4 hover:underline",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:-translate-y-0.5",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
         expandIcon:
-          "group relative text-primary-foreground bg-[#0369A1] hover:bg-[#0369A1]/90 shadow-lg shadow-[#0369A1]/20 hover:shadow-xl hover:shadow-[#0369A1]/30 transition-all duration-300",
+          "group relative text-primary-foreground bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300",
         ringHover:
-          "bg-[#0369A1] text-primary-foreground transition-all duration-300 hover:bg-[#0369A1]/90 hover:ring-2 hover:ring-[#0369A1]/90 hover:ring-offset-2 shadow-lg shadow-[#0369A1]/20",
+          "bg-primary text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2 shadow-lg shadow-primary/20",
         shine:
-          "bg-[#0369A1] text-white hover:bg-[#0369A1]/90 shadow-lg shadow-[#0369A1]/20 hover:shadow-xl hover:shadow-[#0369A1]/30 hover:-translate-y-0.5 transition-all duration-300",
+          "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300",
         gooeyRight:
-          "bg-[#0369A1] text-white hover:bg-[#0369A1]/90 shadow-lg shadow-[#0369A1]/20 hover:shadow-xl hover:shadow-[#0369A1]/30 hover:-translate-y-0.5 transition-all duration-300",
+          "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300",
         gooeyLeft:
-          "bg-[#0369A1] text-white hover:bg-[#0369A1]/90 shadow-lg shadow-[#0369A1]/20 hover:shadow-xl hover:shadow-[#0369A1]/30 hover:-translate-y-0.5 transition-all duration-300",
+          "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300",
         linkHover1:
-          "relative after:absolute after:bg-[#0369A1] after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300",
+          "relative after:absolute after:bg-primary after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300",
         linkHover2:
-          "relative after:absolute after:bg-[#0369A1] after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300",
+          "relative after:absolute after:bg-primary after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-12 px-10 text-base",
-        icon: "h-10 w-10",
+        default: "h-12 px-6 py-2",
+        sm: "h-10 rounded-full px-4",
+        lg: "h-14 px-10 text-lg",
+        icon: "h-12 w-12",
       },
     },
     defaultVariants: {
