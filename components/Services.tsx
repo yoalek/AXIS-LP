@@ -40,8 +40,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, o
     >
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
         <div className="flex items-center gap-6 md:w-1/2">
-          <span className={`text-sm md:text-base font-bold transition-colors duration-500 ${isHovered ? 'text-primary' : 'text-muted-foreground'}`}>{id}</span>
-          <WordPullUp words={title} className={`text-2xl md:text-4xl font-bold tracking-tight transition-colors duration-500 ${isHovered ? 'text-background' : 'text-foreground'}`} />
+          <span className={`text-sm md:text-base font-bold transition-colors duration-500 ${isHovered ? 'text-primary' : 'text-foreground/70'}`}>{id}</span>
+          <WordPullUp words={title} className={`text-2xl md:text-4xl font-bold tracking-tight transition-colors duration-500 ${isHovered ? 'text-white' : 'text-foreground'}`} />
         </div>
         <div className="flex-1 hidden md:block"></div>
         <div className="md:w-32 flex justify-end">

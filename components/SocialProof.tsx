@@ -60,7 +60,7 @@ const SocialProof: React.FC = () => {
             </p>
           </div>
 
-          {/* Right Side: Testimonial Display */}
+          {/* Right Side: Testimonial Display & Metrics */}
           <div className="w-full flex flex-col justify-between min-h-[340px]">
             <div className="relative mb-16">
               <div key={currentIndex} className="animate-fade-in">

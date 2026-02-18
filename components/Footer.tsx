@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-white mb-6 uppercase text-sm tracking-widest">Acesso Rápido</h4>
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
-              <li><a href="#solucao" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Método Axis</a></li>
-              <li><a href="#comparativo" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Custo vs Benefício</a></li>
-              <li><a href="#servicos" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Nossos Serviços</a></li>
-              <li className="pt-4"><FlowButton text="Agendar Diagnóstico" onClick={() => window.open('https://wa.me/5591992026660', '_blank')} size="sm" className="w-full sm:w-auto shadow-none bg-slate-800 hover:bg-primary border border-slate-700" /></li>
+              <li><a href="#solucao" aria-label="Ir para seção Método Axis" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Método Axis</a></li>
+              <li><a href="#comparativo" aria-label="Ir para seção Custo vs Benefício" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Custo vs Benefício</a></li>
+              <li><a href="#servicos" aria-label="Ir para seção Nossos Serviços" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Nossos Serviços</a></li>
+              <li className="pt-4"><FlowButton text="Agendar Diagnóstico" onClick={() => window.open('https://wa.me/5591992026660', '_blank')} size="sm" className="w-full sm:w-auto shadow-none bg-slate-800 hover:bg-primary border border-slate-700 text-white" /></li>
             </ul>
           </div>
           <div>
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="pt-8 border-t border-slate-800 text-center">
-          <p className="text-slate-500 text-sm">© 2026 AXIS Gestão Humana. Todos os direitos reservados. Foco total em Compliance e Risco Zero.</p>
+          <p className="text-slate-400 text-sm">© 2026 AXIS Gestão Humana. Todos os direitos reservados. Foco total em Compliance e Risco Zero.</p>
         </div>
       </div>
     </footer>

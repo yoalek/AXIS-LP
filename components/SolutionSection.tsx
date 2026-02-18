@@ -139,12 +139,13 @@ const SolutionSection: React.FC = () => {
                         {step.title}
                       </h3>
 
-                      <div className="bg-secondary/30 rounded-[2.5rem] p-8 border border-border group-hover:border-primary/30 group-hover:bg-secondary/50 transition-all duration-500">
-                        <p className="text-foreground text-lg lg:text-xl leading-relaxed mb-6 font-medium">
-                          {step.desc}
-                        </p>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {step.details}
+                      <div className="bg-secondary/30 rounded-[2.5rem] p-8 border border-white/10 group-hover:border-primary/30 group-hover:bg-secondary/50 transition-all duration-500 backdrop-blur-sm">
+                        <h4 className="font-bold text-white mb-4 text-xl flex items-center gap-3">
+                          <Check className="w-6 h-6 text-primary flex-shrink-0" />
+                          {step.desc} {/* Changed from item.title to step.desc */}
+                        </h4>
+                        <p className="text-slate-300 leading-relaxed font-medium">
+                          {step.details} {/* Changed from item.desc to step.details */}
                         </p>
 
                         <div className="mt-8 flex gap-2">
