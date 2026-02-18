@@ -36,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, o
       whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 300, damping: 20 } }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`group relative flex flex-col py-8 md:py-12 px-8 transition-colors duration-500 cursor-pointer border-b border-white/10 overflow-hidden backdrop-blur-sm ${isHovered ? 'bg-white shadow-2xl border-transparent' : 'bg-transparent'}`}
+      className={`group relative flex flex-col py-8 md:py-12 px-8 transition-colors duration-500 cursor-pointer border-b border-white/10 overflow-hidden backdrop-blur-sm ${isHovered ? 'bg-white shadow-2xl border-transparent rounded-[2.5rem]' : 'bg-transparent'}`}
     >
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
         <div className="flex items-center gap-6 md:w-1/2">
