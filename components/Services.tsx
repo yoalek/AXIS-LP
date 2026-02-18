@@ -28,7 +28,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, o
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: "-100px" });
   return (
-    <motion.div ref={cardRef} initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.6, ease: "easeOut" }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={`group relative flex flex-col py-8 md:py-12 px-8 transition-all duration-500 cursor-pointer border-b border-border overflow-hidden ${isHovered ? 'bg-foreground rounded-[2.5rem] border-transparent shadow-2xl scale-[1.01]' : 'bg-transparent'}`}>
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+      transition={{ duration: 0.8, ease: [0.21, 1.02, 0.47, 0.98] }} // Alchemist Physics
+      whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      className={`group relative flex flex-col py-8 md:py-12 px-8 transition-colors duration-500 cursor-pointer border-b border-border overflow-hidden ${isHovered ? 'bg-foreground rounded-[2.5rem] border-transparent shadow-2xl' : 'bg-transparent'}`}
+    >
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
         <div className="flex items-center gap-6 md:w-1/2">
           <span className={`text-sm md:text-base font-bold transition-colors duration-500 ${isHovered ? 'text-primary' : 'text-muted-foreground'}`}>{id}</span>

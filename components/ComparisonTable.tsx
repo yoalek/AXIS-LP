@@ -87,8 +87,18 @@ const ComparisonTable: React.FC = () => {
 
         <div className="grid md:grid-cols-2 items-center gap-0 md:gap-4">
           {/* Coluna SolverH / Axis */}
-          <InView transition={{ delay: 0.3, duration: 0.8 }}>
-            <div className="bg-card rounded-[2.5rem] p-10 md:p-14 shadow-xl border-2 border-primary relative z-10 transform md:scale-105">
+          <InView
+            variants={{
+              hidden: { opacity: 0, scale: 0.9, y: 20 },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                transition: { type: "spring", stiffness: 120, damping: 15, delay: 0.2 }
+              }
+            }}
+          >
+            <div className="bg-card rounded-[2.5rem] p-10 md:p-14 shadow-xl border-2 border-primary relative z-10 md:scale-105 transform transition-transform duration-500 hover:scale-[1.07]">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Recomendado</div>
               <h3 className="text-2xl md:text-3xl font-bold text-center text-primary mb-12 uppercase tracking-tight">AXIS GESTÃO HUMANA</h3>
               <div className="space-y-8">

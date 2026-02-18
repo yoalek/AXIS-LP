@@ -134,7 +134,7 @@ const SolutionSection: React.FC = () => {
                   </div>
 
                   <div className="flex-1 pt-2 md:pt-4">
-                    <InView transition={{ delay: index * 0.1, duration: 0.8 }}>
+                    <InView transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 50 }}>
                       <h3 className="text-3xl lg:text-[40px] font-bold text-foreground mb-6 tracking-tight leading-tight group-hover:text-primary transition-colors">
                         {step.title}
                       </h3>
