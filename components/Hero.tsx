@@ -77,7 +77,7 @@ const BlurFade: React.FC<{ children: React.ReactNode; delay?: number; duration?:
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 bg-background overflow-hidden">
+    <section className="relative pt-32 pb-32 lg:pt-48 bg-background overflow-hidden">
       {/* Background Pattern Implementation */}
       <BGPattern
         variant="dots"
@@ -87,15 +87,15 @@ const Hero: React.FC = () => {
         className="text-primary/10 opacity-100"
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container relative z-10">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           {/* Left Column: Content */}
-          <div className="flex flex-col gap-6 text-left">
+          <div className="flex flex-col gap-8 text-left">
             <BlurFade delay={0}>
               <div className="flex justify-start">
                 <UrgencyBadge />
               </div>
-              <h1 className="text-5xl lg:text-[64px] font-extrabold text-foreground leading-[1.05] tracking-tighter mb-6 text-left">
+              <h1 className="text-5xl lg:text-7xl font-extrabold text-foreground leading-[1.1] tracking-tighter mb-6 text-left">
                 Sua Empresa Está
                 <br />
                 <span className="text-primary italic font-normal">Sangrando Dinheiro no eSocial?</span>
@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
                 <FlowButton
                   text="Auditoria de Risco eSocial (Gratuita)"
                   onClick={() => window.open('https://wa.me/5591992026660', '_blank')}
-                  className="w-full sm:w-auto justify-center"
+                  className="w-full sm:w-auto justify-center text-base py-6"
                 />
 
               </div>
@@ -123,17 +123,15 @@ const Hero: React.FC = () => {
           {/* Right Column: Image/Visual */}
           <div className="relative">
             <BlurFade delay={0.6} yOffset={40}>
-              <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-card aspect-[4/3] lg:aspect-square border border-border">
-                <div className="absolute inset-0 grayscale-[0.2] brightness-[0.95]">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-card aspect-[4/3] lg:aspect-square border border-border/50 group">
+                <div className="absolute inset-0 grayscale-[0.2] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                   <img
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=90&w=2000"
                     alt="Modern Office Axis"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
-
-
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
               </div>
             </BlurFade>
           </div>

@@ -4,30 +4,33 @@ import { FlowButton } from './ui/flow-button';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-950 pt-16 pb-8 border-t border-slate-800 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-slate-950 py-16 border-t border-slate-800 transition-colors relative overflow-hidden">
+      {/* Decorative Grid Background - Subtle 2026 touch */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <span className="text-2xl font-extrabold text-sky-500 tracking-tight mb-6 inline-block">AXIS<span className="text-white"> GESTÃO HUMANA</span></span>
-            <p className="text-slate-400 max-w-sm mb-6">
+            <p className="text-slate-400 max-w-sm mb-6 text-lg leading-relaxed">
               Especialistas em BPO de Folha e Compliance Trabalhista para empresas de alta complexidade. Operando com excelência em Belém, Pará e todo o Brasil.
             </p>
           </div>
           <div>
             <h4 className="font-bold text-white mb-6 uppercase text-sm tracking-widest">Acesso Rápido</h4>
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
-              <li><a href="#solucao" className="hover:text-sky-400 transition-colors">Método Axis</a></li>
-              <li><a href="#comparativo" className="hover:text-sky-400 transition-colors">Custo vs Benefício</a></li>
-              <li><a href="#servicos" className="hover:text-sky-400 transition-colors">Nossos Serviços</a></li>
-              <li><FlowButton text="Agendar Diagnóstico" onClick={() => window.open('https://wa.me/5591992026660', '_blank')} size="sm" className="w-full sm:w-auto" /></li>
+              <li><a href="#solucao" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Método Axis</a></li>
+              <li><a href="#comparativo" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Custo vs Benefício</a></li>
+              <li><a href="#servicos" className="hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary transition-all"></span>Nossos Serviços</a></li>
+              <li className="pt-4"><FlowButton text="Agendar Diagnóstico" onClick={() => window.open('https://wa.me/5591992026660', '_blank')} size="sm" className="w-full sm:w-auto shadow-none bg-slate-800 hover:bg-primary border border-slate-700" /></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-white mb-6 uppercase text-sm tracking-widest">Segurança</h4>
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Políticas de Privacidade</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">LGPD Compliance</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Certificações Digitais</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Políticas de Privacidade</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">LGPD Compliance</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Certificações Digitais</a></li>
             </ul>
           </div>
         </div>

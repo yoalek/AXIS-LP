@@ -72,7 +72,7 @@ const PainCard: React.FC<{ title: string; desc: string; children: React.ReactNod
 const PainSection: React.FC = () => {
   return (
     <section className="bg-background py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container relative z-10">
         <div className="text-center mb-24">
           <InView transition={{ delay: 0.1, duration: 0.6 }}>
             <div className="inline-block px-4 py-1.5 rounded-full bg-destructive/10 border border-destructive/20 text-destructive text-[13px] font-bold mb-8 uppercase tracking-widest">

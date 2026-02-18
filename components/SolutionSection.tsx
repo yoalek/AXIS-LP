@@ -87,7 +87,7 @@ const SolutionSection: React.FC = () => {
 
   return (
     <section id="solucao" className="py-32 bg-background overflow-hidden relative" ref={containerRef}>
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 
           {/* Left Column - Heading (Sticky) */}

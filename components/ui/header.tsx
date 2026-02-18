@@ -71,8 +71,8 @@ function Header() {
                             <div className="absolute inset-0 rounded-xl border border-white/20"></div>
                         </div>
                         <div className="flex flex-col leading-none">
-                            <span className="text-xl font-black text-foreground tracking-tighter uppercase">AXIS</span>
-                            <span className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase">Gestão Humana</span>
+                            <span className="text-2xl font-black text-foreground tracking-tighter uppercase">AXIS</span>
+                            <span className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase">Gestão Humana</span>
                         </div>
                     </div>
 
