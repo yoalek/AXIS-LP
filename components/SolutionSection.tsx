@@ -117,7 +117,7 @@ const SolutionSection: React.FC = () => {
                 style={{ height: `${progressHeight}%` }}
               >
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full blur-sm opacity-60"></div>
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rounded-full shadow-[0_0_15px_rgba(4,119,209,1)]"></div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary"></div>
               </div>
             </div>
 
@@ -126,8 +126,8 @@ const SolutionSection: React.FC = () => {
                 <div key={index} className="flex gap-8 md:gap-16 group relative mb-24 last:mb-0">
                   <div className="flex flex-col items-center flex-shrink-0 relative z-20">
                     <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full border-2 transition-all duration-500 flex items-center justify-center text-[15px] font-bold bg-card shadow-sm group-hover:scale-110 ${progressHeight > (index / steps.length) * 100 + 10
-                        ? 'border-primary text-primary shadow-[0_0_20px_rgba(4,119,209,0.1)]'
-                        : 'border-border text-muted-foreground'
+                      ? 'border-primary text-primary shadow-primary/20'
+                      : 'border-border text-muted-foreground'
                       }`}>
                       {step.number}
                     </div>
@@ -150,8 +150,8 @@ const SolutionSection: React.FC = () => {
                         <div className="mt-8 flex gap-2">
                           {[1, 2, 3].map(i => (
                             <div key={i} className={`h-1 rounded-full transition-all duration-1000 delay-${i * 100} ${progressHeight > (index / steps.length) * 100 + 20
-                                ? 'bg-primary w-12'
-                                : 'bg-muted w-4'
+                              ? 'bg-primary w-12'
+                              : 'bg-muted w-4'
                               }`}></div>
                           ))}
                         </div>

@@ -100,16 +100,16 @@ const PainSection: React.FC = () => {
                 <div className="flex justify-between items-center mb-2 px-2">
                   <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Eventos de Transmissão</span>
                   <div className="flex gap-1">
-                    <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                    <div className="w-2 h-2 rounded-full bg-amber-500"></div>
+                    <div className="w-2 h-2 rounded-full bg-success"></div>
+                    <div className="w-2 h-2 rounded-full bg-warning"></div>
                     <div className="w-2 h-2 rounded-full bg-destructive"></div>
                   </div>
                 </div>
                 {[
-                  { label: 'S-1200 - Remuneração', status: 'OK', color: 'text-emerald-500' },
+                  { label: 'S-1200 - Remuneração', status: 'OK', color: 'text-success' },
                   { label: 'S-2299 - Rescisão', status: 'ERRO', color: 'text-destructive', alert: true },
                   { label: 'DCTF-Web - Fechamento', status: 'CONFLITO', color: 'text-destructive', alert: true },
-                  { label: 'S-1210 - Pagamentos', status: 'PENDENTE', color: 'text-amber-500' }
+                  { label: 'S-1210 - Pagamentos', status: 'PENDENTE', color: 'text-warning' }
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -125,7 +125,7 @@ const PainSection: React.FC = () => {
                         </motion.div>
                       ) : (
                         <div className="w-4 h-4 rounded-full border border-border flex items-center justify-center">
-                          <div className={`w-1.5 h-1.5 rounded-full ${item.status === 'OK' ? 'bg-emerald-500' : 'bg-amber-500'}`}></div>
+                          <div className={`w-1.5 h-1.5 rounded-full ${item.status === 'OK' ? 'bg-success' : 'bg-warning'}`}></div>
                         </div>
                       )}
                       <span className="text-xs font-bold text-foreground/80">{item.label}</span>
