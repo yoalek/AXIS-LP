@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef, useState, ReactNode } from 'react';
 import { motion, useInView, Variant, Transition, UseInViewOptions } from 'framer-motion';
+import { Check } from 'lucide-react';
 
 // --- InView Animation Component ---
 interface InViewProps {
