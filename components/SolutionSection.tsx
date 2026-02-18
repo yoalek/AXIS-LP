@@ -140,12 +140,12 @@ const SolutionSection: React.FC = () => {
                         {step.title}
                       </h3>
 
-                      <div className="bg-slate-950/90 rounded-[2.5rem] p-8 border border-white/10 group-hover:border-primary/30 group-hover:bg-slate-900 transition-all duration-500 backdrop-blur-sm">
-                        <h4 className="font-bold text-white mb-4 text-xl flex items-center gap-3">
+                      <div className="bg-card/80 dark:bg-slate-950/90 rounded-[2.5rem] p-8 border border-border dark:border-white/10 group-hover:border-primary/50 group-hover:bg-card dark:group-hover:bg-slate-900 transition-all duration-500 backdrop-blur-sm shadow-sm dark:shadow-none">
+                        <h4 className="font-bold text-card-foreground dark:text-white mb-4 text-xl flex items-center gap-3">
                           <Check className="w-6 h-6 text-primary flex-shrink-0" />
                           {step.desc}
                         </h4>
-                        <p className="text-slate-200 leading-relaxed font-medium">
+                        <p className="text-muted-foreground dark:text-slate-200 leading-relaxed font-medium">
                           {step.details} {/* Changed from item.desc to step.details */}
                         </p>
 
