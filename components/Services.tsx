@@ -58,10 +58,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, o
 const Services: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const serviceList = [
-    { id: "01", title: "BPO DE FOLHA COMPLETO", desc: "Gestão pontual de salários, encargos, DCTF-Web e FGTS Digital. Garantimos zero erros e zero multas para sua operação focar no que importa." },
-    { id: "02", title: "CICLO DO COLABORADOR", desc: "Admissões em massa, gestão de férias, PIS e processos de rescisão complexos com total segurança jurídica e compliance." },
-    { id: "03", title: "BLINDAGEM ESOCIAL", desc: "Monitoramento ativo e auditoria preventiva para evitar passivos ocultos. Sua empresa sempre em dia com a Receita e o Ministério do Trabalho." },
-    { id: "04", title: "RECRUTAMENTO & MÃO DE OBRA", desc: "Fornecemos talentos qualificados e mão de obra terceirizada para Facilities, Construção e Varejo com foco em produtividade." },
+    { id: "01", title: "BPO DE FOLHA COMPLETO", desc: "Terceirização total da folha com responsabilidade técnica. Cálculo, conferência e transmissão de eSocial, FGTS e DCTF." },
+    { id: "02", title: "RECUPERAÇÃO TRIBUTÁRIA", desc: "Análise profunda de verbas indenizatórias e previdenciárias para recuperar valores pagos indevidamente ao fisco nos últimos 5 anos." },
+    { id: "03", title: "GESTÃO DE BENEFÍCIOS", desc: "Controle operacional de VT, VR, Plano de Saúde e Odontológico, desonerando seu RH interno de tarefas manuais." },
+    { id: "04", title: "ADMISSÃO DIGITAL", desc: "Processo de onboarding 100% digital e fluido, garantindo uma experiência premium para seus novos colaboradores desde o dia 1." },
   ];
   return (
     <section id="servicos" className="py-32 bg-background transition-colors">

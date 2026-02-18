@@ -79,13 +79,12 @@ const PainSection: React.FC = () => {
               O Risco Silencioso
             </div>
           </InView>
-          
-          <MagicHeading text="Erros no eSocial e DCTF-Web destroem seu lucro" />
-          
+
+          <MagicHeading text="Sua Folha de Pagamento é uma Bomba-Relógio?" />
+
           <InView transition={{ delay: 0.3, duration: 0.8 }}>
             <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed">
-              Você sabia? <span className="text-destructive font-bold">Inconsistências no FGTS Digital</span> e atrasos na folha 
-              são os principais gatilhos para multas pesadas e processos trabalhistas.
+              Você sabia? <span className="text-destructive font-bold">Erros de cadastro</span> e inconsistências em verbas indenizatórias são os maiores geradores de autuações automáticas da Receita Federal.
             </p>
           </InView>
         </div>
@@ -93,9 +92,9 @@ const PainSection: React.FC = () => {
         <div className="flex flex-col border-b border-border">
           {/* Card 1: Caos eSocial - Dashboard de Alertas */}
           <InView transition={{ delay: 0.1 }}>
-            <PainCard 
-              title="Caos no eSocial" 
-              desc="Informações desencontradas que geram multas automáticas da Receita Federal antes mesmo de você perceber o erro."
+            <PainCard
+              title="Malha Fina do eSocial"
+              desc="Informações desencontradas entre RH e Contabilidade que geram autuações automáticas da Receita Federal antes mesmo da fiscalização bater."
             >
               <div className="relative w-full h-full flex flex-col gap-3">
                 <div className="flex justify-between items-center mb-2 px-2">
@@ -112,7 +111,7 @@ const PainSection: React.FC = () => {
                   { label: 'DCTF-Web - Fechamento', status: 'CONFLITO', color: 'text-destructive', alert: true },
                   { label: 'S-1210 - Pagamentos', status: 'PENDENTE', color: 'text-amber-500' }
                 ].map((item, idx) => (
-                  <motion.div 
+                  <motion.div
                     key={idx}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -140,9 +139,9 @@ const PainSection: React.FC = () => {
 
           {/* Card 2: Passivo Trabalhista - Radar de Risco */}
           <InView transition={{ delay: 0.1 }}>
-            <PainCard 
-              title="Passivo Trabalhista Oculto" 
-              desc="Férias vencidas, rescisões mal calculadas e PIS incorreto — uma bomba relógio jurídica armada no seu backoffice."
+            <PainCard
+              title="Passivo Trabalhista Oculto"
+              desc="Férias vencidas, rescisões mal calculadas e horas extras incorretas — uma dívida silenciosa que explode em processos trabalhistas."
             >
               <div className="relative flex items-center justify-center w-full h-full">
                 {/* Radar Background */}
@@ -151,9 +150,9 @@ const PainSection: React.FC = () => {
                     <div className="w-16 h-16 rounded-full border border-destructive/10"></div>
                   </div>
                 </div>
-                
+
                 {/* Scanning Beam */}
-                <motion.div 
+                <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                   className="absolute w-48 h-48 rounded-full bg-gradient-to-tr from-destructive/20 to-transparent opacity-30 origin-center"
@@ -166,7 +165,7 @@ const PainSection: React.FC = () => {
                   { top: '65%', left: '70%', label: 'FGTS' },
                   { top: '40%', left: '60%', label: 'FÉRIAS' }
                 ].map((point, idx) => (
-                  <motion.div 
+                  <motion.div
                     key={idx}
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
@@ -178,11 +177,11 @@ const PainSection: React.FC = () => {
                     <span className="text-[8px] font-black text-destructive mt-1 bg-background/50 px-1 rounded">{point.label}</span>
                   </motion.div>
                 ))}
-                
+
                 <div className="absolute bottom-4 flex flex-col items-center">
                   <span className="text-[10px] font-black text-destructive uppercase tracking-widest animate-pulse">Ameaça Detectada</span>
                   <div className="w-24 h-1 bg-destructive/20 rounded-full mt-1 overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       animate={{ x: [-100, 100] }}
                       transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
                       className="w-full h-full bg-destructive"
@@ -195,16 +194,16 @@ const PainSection: React.FC = () => {
 
           {/* Card 3: Falta de Tempo - Ampulheta Operacional */}
           <InView transition={{ delay: 0.1 }}>
-            <PainCard 
-              title="Falta de Tempo do Decisor" 
-              desc="Sócio ou Gerente de RH perdendo horas em planilhas e e-mails, enquanto o core business da empresa fica estagnado."
+            <PainCard
+              title="Burocracia vs. Estratégia"
+              desc="Sua liderança perdendo horas conferindo planilhas e guias manuais, em vez de focar no crescimento do negócio."
             >
               <div className="flex flex-col items-center justify-center w-full h-full relative">
                 {/* Digital Hourglass */}
                 <div className="flex flex-col items-center gap-2">
                   {/* Top Part (Strategic Time emptying) */}
                   <div className="w-24 h-16 border-2 border-border border-b-0 rounded-t-3xl bg-secondary/50 relative overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       animate={{ height: ['80%', '10%'] }}
                       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
                       className="absolute bottom-0 left-0 right-0 bg-primary/20 flex flex-col items-center justify-center"
@@ -212,13 +211,13 @@ const PainSection: React.FC = () => {
                       <span className="text-[8px] font-bold text-primary uppercase">Estratégia</span>
                     </motion.div>
                   </div>
-                  
+
                   {/* Neck */}
                   <div className="w-4 h-2 border-x-2 border-border"></div>
-                  
+
                   {/* Bottom Part (Operational Time filling) */}
                   <div className="w-24 h-20 border-2 border-border border-t-0 rounded-b-3xl bg-secondary/50 relative overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       animate={{ height: ['20%', '95%'] }}
                       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
                       className="absolute bottom-0 left-0 right-0 bg-destructive/20 flex flex-col items-center pt-2"
@@ -232,16 +231,16 @@ const PainSection: React.FC = () => {
                     </motion.div>
                   </div>
                 </div>
-                
+
                 {/* Floating "Tasks" icons */}
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, -10, 0], opacity: [0, 1, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="absolute right-12 top-12"
                 >
                   <FileWarning className="w-6 h-6 text-destructive/40" />
                 </motion.div>
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, -10, 0], opacity: [0, 1, 0] }}
                   transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
                   className="absolute left-16 top-16"
