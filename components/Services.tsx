@@ -36,12 +36,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, o
       whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 300, damping: 20 } }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`group relative flex flex-col py-8 md:py-12 px-8 transition-colors duration-500 cursor-pointer border-b border-white/10 overflow-hidden backdrop-blur-sm ${isHovered ? 'bg-white/5 rounded-[2.5rem] border-white/20 shadow-2xl' : 'bg-transparent'}`}
+      className={`group relative flex flex-col py-8 md:py-12 px-8 transition-colors duration-500 cursor-pointer border-b border-white/10 overflow-hidden backdrop-blur-sm ${isHovered ? 'bg-white shadow-2xl border-transparent' : 'bg-transparent'}`}
     >
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
         <div className="flex items-center gap-6 md:w-1/2">
           <span className={`text-sm md:text-base font-bold transition-colors duration-500 ${isHovered ? 'text-primary' : 'text-foreground/70'}`}>{id}</span>
-          <WordPullUp words={title} className={`text-2xl md:text-4xl font-bold tracking-tight transition-colors duration-500 ${isHovered ? 'text-white' : 'text-foreground'}`} />
+          <WordPullUp words={title} className={`text-2xl md:text-4xl font-bold tracking-tight transition-colors duration-500 ${isHovered ? 'text-primary' : 'text-foreground'}`} />
         </div>
         <div className="flex-1 hidden md:block"></div>
         <div className="md:w-32 flex justify-end">
@@ -51,7 +51,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, desc, isHovered, o
         </div>
       </div>
       <motion.div initial={false} animate={{ height: isHovered ? "auto" : 0, opacity: isHovered ? 1 : 0, marginTop: isHovered ? 24 : 0 }} transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }} className="overflow-hidden md:w-2/3 md:ml-16">
-        <p className={`text-lg md:text-xl leading-relaxed transition-colors duration-500 font-medium ${isHovered ? 'text-background' : 'text-transparent'}`}>{desc}</p>
+        <p className={`text-lg md:text-xl leading-relaxed transition-colors duration-500 font-medium ${isHovered ? 'text-muted-foreground' : 'text-transparent'}`}>{desc}</p>
       </motion.div>
 
     </motion.div>
